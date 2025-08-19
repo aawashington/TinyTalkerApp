@@ -25,7 +25,7 @@ struct Category: Identifiable {
 // Sample categories used to populate the app
 let sampleCategories: [Category] = [
     Category(name: "Food", emoji: "🍳", tiles: [
-        //food category
+        //tiles for food category
         Tile(emoji: "🍎", text: "Apples"),
         Tile(emoji: "🍌", text: "Bananas"),
         Tile(emoji: "🍓", text: "Strawberries"),
@@ -53,15 +53,23 @@ let sampleCategories: [Category] = [
         Tile(emoji: "🍦", text: "Ice Cream"),
     ]),
     Category(name: "Feelings", emoji: "😊", tiles: [
-        //tiles from Needs category as a placeholder
-        Tile(emoji: "🚽", text: "I need to potty"),
-        Tile(emoji: "🍽️", text: "I’m hungry"),
-        Tile(emoji: "🧃", text: "I’m thirsty"),
-        Tile(emoji: "😴", text: "I’m tired"),
-        Tile(emoji: "🙋‍♀️", text: "I need help"),
-        Tile(emoji: "🥵", text: "I’m hot"),
-        Tile(emoji: "🥶", text: "I’m cold"),
-        Tile(emoji: "🙆‍♀️", text: "All done")
+        //tiles for feelings category
+        Tile(emoji: "😁", text: "Happy"),
+        Tile(emoji: "🥲", text: "Sad"),
+        Tile(emoji: "😡", text: "Angry"),
+        Tile(emoji: "😨", text: "Scared"),
+        Tile(emoji: "🥱", text: "Tired"),
+        Tile(emoji: "🤒", text: "Sick"),
+        Tile(emoji: "😖", text: "Frustrated"),
+        Tile(emoji: "🤪", text: "Silly"),
+        Tile(emoji: "🥰", text: "Love"),
+        Tile(emoji: "😂", text: "Funny"),
+        Tile(emoji: "😌", text: "Calm"),
+        Tile(emoji: "🫣", text: "Nervous"),
+        Tile(emoji: "🤔", text: "Confused"),
+        Tile(emoji: "😳", text: "Suprised"),
+        Tile(emoji: "😍", text: "Beautiful"),
+        
     ]),
     Category(
             name: "Needs",

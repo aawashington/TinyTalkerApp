@@ -5,6 +5,7 @@
 //  Created by Alexis Washington on 8/17/25.
 //
 import SwiftUI
+import AVFoundation
 
 // Function to singularize and handle special cases
 func singularize(_ category: String) -> String {
@@ -29,6 +30,7 @@ func article(for word: String) -> String {
 // Detail screen for a selected category
 struct CategoryDetailView: View {
     let category: Category
+    private let speechSynthesizer = AVSpeechSynthesizer() // 🔊
 
     var body: some View {
         ZStack {
@@ -49,7 +51,12 @@ struct CategoryDetailView: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                         ForEach(category.tiles) { tile in
-                            TileView(tile: tile)
+                            Button(action: {
+                                speak(tile.text) // 🔊 Speak when tapped
+                            }) {
+                                TileView(tile: tile)
+                            }
+                            .buttonStyle(.plain) // keep the custom look
                         }
                     }
                     .padding(.horizontal)
@@ -58,6 +65,14 @@ struct CategoryDetailView: View {
         }
         .navigationTitle(category.name)
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    // Helper method to speak text
+    private func speak(_ text: String) {
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.rate = 0.4 // slower for clarity
+        speechSynthesizer.speak(utterance)
     }
 }
 

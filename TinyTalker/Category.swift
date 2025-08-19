@@ -72,9 +72,8 @@ let sampleCategories: [Category] = [
         
     ]),
     Category(
-            name: "Needs",
-            emoji: "🚻",
-            tiles: [
+            name: "Needs",emoji: "🚻",tiles: [
+                // tiles for Needs category
                 Tile(emoji: "🚽", text: "I need to potty"),
                 Tile(emoji: "🍽️", text: "I’m hungry"),
                 Tile(emoji: "🧃", text: "I’m thirsty"),
@@ -86,58 +85,70 @@ let sampleCategories: [Category] = [
             ]
         ),
     Category(name: "Clothing", emoji: "👖", tiles: [
-        //tiles from Needs category as a placeholder
-        Tile(emoji: "🚽", text: "I need to potty"),
-        Tile(emoji: "🍽️", text: "I’m hungry"),
-        Tile(emoji: "🧃", text: "I’m thirsty"),
-        Tile(emoji: "😴", text: "I’m tired"),
-        Tile(emoji: "🙋‍♀️", text: "I need help"),
-        Tile(emoji: "🥵", text: "I’m hot"),
-        Tile(emoji: "🥶", text: "I’m cold"),
-        Tile(emoji: "🙆‍♀️", text: "All done")
+        //tiles for Clothing category
+        Tile(emoji: "👕", text: "Shirt"),
+        Tile(emoji: "👖", text: "Pants"),
+        Tile(emoji: "🩳", text: "Shorts"),
+        Tile(emoji: "👗", text: "Dress"),
+        Tile(emoji: "🧥", text: "Jacket"),
+        Tile(emoji: "🧦", text: "Socks"),
+        Tile(emoji: "👟", text: "Shoes"),
+        Tile(emoji: "🧢", text: "Hat"),
+        Tile(emoji: "🩲", text: "Underwear"),
+        Tile(emoji: "👓", text: "Glasses"),
+        Tile(emoji: "🎒", text: "Bag"),
+        
     ]),
     Category(name: "Colors", emoji: "🎨", tiles: [
-        //tiles from Needs category as a placeholder
-        Tile(emoji: "🚽", text: "I need to potty"),
-        Tile(emoji: "🍽️", text: "I’m hungry"),
-        Tile(emoji: "🧃", text: "I’m thirsty"),
-        Tile(emoji: "😴", text: "I’m tired"),
-        Tile(emoji: "🙋‍♀️", text: "I need help"),
-        Tile(emoji: "🥵", text: "I’m hot"),
-        Tile(emoji: "🥶", text: "I’m cold"),
-        Tile(emoji: "🙆‍♀️", text: "All done")
+        //tiles for colors category
+        Tile(emoji: "🔴", text: "Red"),
+        Tile(emoji: "🟠", text: "Orange"),
+        Tile(emoji: "🟡", text: "Yellow"),
+        Tile(emoji: "🟢", text: "Green"),
+        Tile(emoji: "🔵", text: "Blue"),
+        Tile(emoji: "🟣", text: "Purple"),
+        Tile(emoji: "🟤", text: "Brown"),
+        Tile(emoji: "⚫️", text: "Black"),
+        Tile(emoji: "⚪️", text: "White"),
+        Tile(emoji: "🩷", text: "Pink"),
+        Tile(emoji: "🩶", text: "Grey"),
+        Tile(emoji: "🌈", text: "Rainbow"),
     ]),
     Category(name: "People", emoji: "🧑‍🤝‍🧑", tiles: [
-        //tiles from Needs category as a placeholder
-        Tile(emoji: "🚽", text: "I need to potty"),
-        Tile(emoji: "🍽️", text: "I’m hungry"),
-        Tile(emoji: "🧃", text: "I’m thirsty"),
-        Tile(emoji: "😴", text: "I’m tired"),
-        Tile(emoji: "🙋‍♀️", text: "I need help"),
-        Tile(emoji: "🥵", text: "I’m hot"),
-        Tile(emoji: "🥶", text: "I’m cold"),
-        Tile(emoji: "🙆‍♀️", text: "All done")
+        //tiles for People category
+        Tile(emoji: "👩‍🦱", text: "Mom"),
+        Tile(emoji: "👨‍🦱", text: "Dad"),
+        Tile(emoji: "👧", text: "Sister"),
+        Tile(emoji: "👦", text: "Brother"),
+        Tile(emoji: "👵", text: "Grandma"),
+        Tile(emoji: "👴", text: "Grandpa"),
+        Tile(emoji: "👶", text: "Baby"),
+        Tile(emoji: "🧑‍🤝‍🧑", text: "Friend"),
+        Tile(emoji: "🧑‍🏫", text: "Teacher"),
+        Tile(emoji: "🧑‍⚕️", text: "Doctor"),
+        Tile(emoji: "👮", text: "Police"),
+        
     ]),
     Category(name: "Places", emoji: "🗺️", tiles: [
-        //tiles from Needs category as a placeholder
-        Tile(emoji: "🚽", text: "I need to potty"),
-        Tile(emoji: "🍽️", text: "I’m hungry"),
-        Tile(emoji: "🧃", text: "I’m thirsty"),
-        Tile(emoji: "😴", text: "I’m tired"),
-        Tile(emoji: "🙋‍♀️", text: "I need help"),
-        Tile(emoji: "🥵", text: "I’m hot"),
-        Tile(emoji: "🥶", text: "I’m cold"),
-        Tile(emoji: "🙆‍♀️", text: "All done")
+        //tiles for Places category
+        Tile(emoji: "🏠", text: "Home"),
+        Tile(emoji: "🛏️", text: "Bedroom"),
+        Tile(emoji: "🚽", text: "Bathroom"),
+        Tile(emoji: "🍽️", text: "Kitchen"),
+        Tile(emoji: "🏫", text: "School"),
+        Tile(emoji: "🏪", text: "Store"),
+        Tile(emoji: "🛝", text: "Park"),
+        Tile(emoji: "🚙", text: "Car")
     ]),
     Category(name: "Activities", emoji: "🎮",tiles: [
-        //tiles from Needs category as a placeholder
-        Tile(emoji: "🚽", text: "I need to potty"),
-        Tile(emoji: "🍽️", text: "I’m hungry"),
-        Tile(emoji: "🧃", text: "I’m thirsty"),
-        Tile(emoji: "😴", text: "I’m tired"),
-        Tile(emoji: "🙋‍♀️", text: "I need help"),
-        Tile(emoji: "🥵", text: "I’m hot"),
-        Tile(emoji: "🥶", text: "I’m cold"),
-        Tile(emoji: "🙆‍♀️", text: "All done")
+        //tiles for Activities category
+        Tile(emoji: "🏀", text: "Play"),
+        Tile(emoji: "📖", text: "Read"),
+        Tile(emoji: "🎶", text: "Music"),
+        Tile(emoji: "🕺", text: "Dance"),
+        Tile(emoji: "📺", text: "Watch TV"),
+        Tile(emoji: "🎮", text: "Game"),
+        Tile(emoji: "✏️", text: "Draw"),
+        Tile(emoji: "🚶", text: "Walk")
     ])
 ]

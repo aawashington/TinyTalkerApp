@@ -6,6 +6,26 @@
 //
 import SwiftUI
 
+// Function to singularize and handle special cases
+func singularize(_ category: String) -> String {
+    let lower = category.lowercased()
+    
+    if lower == "people" {
+        return "Person"
+    } else if lower == "activities" {
+        return "Activity"
+    } else if lower.hasSuffix("s") {
+        return String(category.dropLast())
+    }
+    return category
+}
+
+// Function to pick "A" or "An"
+func article(for word: String) -> String {
+    guard let firstChar = word.lowercased().first else { return "A" }
+    return ["a", "e", "i", "o", "u"].contains(firstChar) ? "An" : "A"
+}
+
 // Detail screen for a selected category
 struct CategoryDetailView: View {
     let category: Category
@@ -15,8 +35,12 @@ struct CategoryDetailView: View {
             Color("TTBackground").ignoresSafeArea() // background
 
             VStack(spacing: 16) {
-                // Dynamic header, remove "s" for singular form
-                Text("Choose A \(category.name.dropLast())")
+                
+                // Dynamic header
+                let singularCategory = singularize(category.name)
+                let articleWord = article(for: singularCategory)
+
+                Text("Choose \(articleWord) \(singularCategory)")
                     .font(.title.bold())
                     .foregroundColor(Color("TTAccent"))
                     .padding(.top, 8)

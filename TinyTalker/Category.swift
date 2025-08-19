@@ -26,6 +26,7 @@ struct Category: Identifiable {
 let sampleCategories: [Category] = [
     Category(name: "Food", emoji: "🍳", tiles: [
         //tiles for food category
+        Tile(emoji: "🍽️", text: "I want to eat"),
         Tile(emoji: "🍎", text: "Apples"),
         Tile(emoji: "🍌", text: "Bananas"),
         Tile(emoji: "🍓", text: "Strawberries"),
@@ -52,8 +53,10 @@ let sampleCategories: [Category] = [
         Tile(emoji: "🍪", text: "Cookie"),
         Tile(emoji: "🍦", text: "Ice Cream"),
     ]),
+    
     Category(name: "Feelings", emoji: "😊", tiles: [
         //tiles for feelings category
+        Tile(emoji: "🙋", text: "I feel"),
         Tile(emoji: "😁", text: "Happy"),
         Tile(emoji: "🥲", text: "Sad"),
         Tile(emoji: "😡", text: "Angry"),
@@ -71,19 +74,19 @@ let sampleCategories: [Category] = [
         Tile(emoji: "😍", text: "Beautiful"),
         
     ]),
-    Category(
-            name: "Needs",emoji: "🚻",tiles: [
-                // tiles for Needs category
-                Tile(emoji: "🚽", text: "I need to potty"),
-                Tile(emoji: "🍽️", text: "I’m hungry"),
-                Tile(emoji: "🧃", text: "I’m thirsty"),
-                Tile(emoji: "😴", text: "I’m tired"),
-                Tile(emoji: "🙋‍♀️", text: "I need help"),
-                Tile(emoji: "🥵", text: "I’m hot"),
-                Tile(emoji: "🥶", text: "I’m cold"),
-                Tile(emoji: "🙆‍♀️", text: "All done")
-            ]
-        ),
+    
+    Category(name: "Needs",emoji: "🚻",tiles: [
+        // tiles for Needs category
+        Tile(emoji: "🚽", text: "I need to potty"),
+        Tile(emoji: "🍽️", text: "I’m hungry"),
+        Tile(emoji: "🧃", text: "I’m thirsty"),
+        Tile(emoji: "😴", text: "I’m tired"),
+        Tile(emoji: "🙋‍♀️", text: "I need help"),
+        Tile(emoji: "🥵", text: "I’m hot"),
+        Tile(emoji: "🥶", text: "I’m cold"),
+        Tile(emoji: "🙆‍♀️", text: "All done")
+    ]),
+    
     Category(name: "Clothing", emoji: "👖", tiles: [
         //tiles for Clothing category
         Tile(emoji: "👕", text: "Shirt"),
@@ -97,8 +100,8 @@ let sampleCategories: [Category] = [
         Tile(emoji: "🩲", text: "Underwear"),
         Tile(emoji: "👓", text: "Glasses"),
         Tile(emoji: "🎒", text: "Bag"),
-        
     ]),
+    
     Category(name: "Colors", emoji: "🎨", tiles: [
         //tiles for colors category
         Tile(emoji: "🔴", text: "Red"),
@@ -114,6 +117,7 @@ let sampleCategories: [Category] = [
         Tile(emoji: "🩶", text: "Grey"),
         Tile(emoji: "🌈", text: "Rainbow"),
     ]),
+    
     Category(name: "People", emoji: "🧑‍🤝‍🧑", tiles: [
         //tiles for People category
         Tile(emoji: "👩‍🦱", text: "Mom"),
@@ -127,8 +131,8 @@ let sampleCategories: [Category] = [
         Tile(emoji: "🧑‍🏫", text: "Teacher"),
         Tile(emoji: "🧑‍⚕️", text: "Doctor"),
         Tile(emoji: "👮", text: "Police"),
-        
     ]),
+    
     Category(name: "Places", emoji: "🗺️", tiles: [
         //tiles for Places category
         Tile(emoji: "🏠", text: "Home"),
@@ -140,8 +144,10 @@ let sampleCategories: [Category] = [
         Tile(emoji: "🛝", text: "Park"),
         Tile(emoji: "🚙", text: "Car")
     ]),
+    
     Category(name: "Activities", emoji: "🎮",tiles: [
         //tiles for Activities category
+        Tile(emoji: "🙋", text: "I want to"),
         Tile(emoji: "🏀", text: "Play"),
         Tile(emoji: "📖", text: "Read"),
         Tile(emoji: "🎶", text: "Music"),

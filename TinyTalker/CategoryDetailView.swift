@@ -97,10 +97,10 @@ struct CategoryDetailView: View {
                     .overlay(
                         VStack(spacing: 12) {
                             ProgressView()
-                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                .progressViewStyle(CircularProgressViewStyle(tint: .ttHighlight))
                                 .scaleEffect(1.5)
                             Text("Speaking…")
-                                .foregroundColor(.white)
+                                .foregroundColor(.ttHighlight)
                                 .font(.headline.bold())
                         }
                         .padding()

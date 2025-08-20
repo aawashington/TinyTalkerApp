@@ -18,11 +18,46 @@ struct RootView: View {
                 SplashView()
                     .transition(.opacity.combined(with: .scale))
             } else {
-                // Main app navigation stack with categories
-                NavigationStack {
-                    CategoriesView()
+                TabView {
+                    // Keyboard tab (placeholder for now)
+                    NavigationStack {
+                        Text("Keyboard / Type-to-Speech Page")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(Color("TTBackground"))
+                    }
+                    .tabItem {
+                        Label("Keyboard", systemImage: "keyboard")
+                    }
+                                    
+                    // Home (categories)
+                    NavigationStack {
+                        CategoriesView()
+                    }
+                    .tabItem {
+                        Label("Home", systemImage: "house.fill")
+                    }
+                                    
+                    // Add Custom Button tab (placeholder)
+                    NavigationStack {
+                        Text("Custom Button Page")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(Color("TTBackground"))
+                    }
+                    .tabItem {
+                        Label("Add", systemImage: "plus.circle.fill")
+                    }
+                                    
+                    // Settings tab (placeholder)
+                    NavigationStack {
+                        Text("Settings Page")
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(Color("TTBackground"))
+                    }
+                    .tabItem {
+                        Label("Settings", systemImage: "gearshape.fill")
+                    }
                 }
-                .transition(.opacity) // fade transition when splash disappears
+                .transition(.opacity)
             }
         }
         .onAppear {

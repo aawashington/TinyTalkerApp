@@ -1,0 +1,73 @@
+import SwiftUI
+
+struct AddButtonView: View {
+    @State private var phraseText: String = ""
+    @State private var selectedImage: UIImage? = nil
+    @State private var showImagePicker = false
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            
+            // Image picker button
+            Button(action: {
+                showImagePicker = true
+            }) {
+                if let image = selectedImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150)
+                        .cornerRadius(12)
+                } else {
+                    VStack {
+                        Image(systemName: "camera")
+                            .font(.largeTitle)
+                            .padding(.bottom, 4)
+                        Text("Add Photo")
+                    }
+                    .frame(width: 150, height: 150)
+                    .background(Color.white)
+                    .cornerRadius(12)
+                    .shadow(radius: 2)
+                }
+            }
+            .sheet(isPresented: $showImagePicker) {
+                ImagePicker(image: $selectedImage)
+            }
+            
+            // Phrase text field
+            TextField("Type Phrase...", text: $phraseText)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .cornerRadius(12)
+                .shadow(radius: 2)
+                .padding(.horizontal)
+            
+            // Save button
+            Button(action: {
+                saveCustomButton()
+            }) {
+                Text("Save Button")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: 200)
+                    .background(Color.blue)
+                    .cornerRadius(12)
+                    .shadow(radius: 2)
+            }
+            
+            Spacer()
+        }
+        .padding(.top)
+        .background(Color("TTBackground").ignoresSafeArea())
+        .navigationTitle("New Button")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    private func saveCustomButton() {
+        // TODO: Hook this into your category/tiles data model
+        print("Saving button: \(phraseText)")
+    }
+}

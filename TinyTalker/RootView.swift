@@ -19,42 +19,23 @@ struct RootView: View {
                     .transition(.opacity.combined(with: .scale))
             } else {
                 TabView {
-                    // Keyboard tab (placeholder for now)
-                    NavigationStack {
-                        Text("Keyboard / Type-to-Speech Page")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(Color("TTBackground"))
-                    }
-                    .tabItem {
-                        Label("Keyboard", systemImage: "keyboard")
-                    }
+                    // Keyboard tab 
+                    NavigationStack { KeyboardView() }
+                        .tabItem { Label("Keyboard", systemImage: "keyboard") }
                                     
                     // Home (categories)
-                    NavigationStack {
-                        CategoriesView()
-                    }
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
-                    }
+                    NavigationStack { AddButtonView() }
+                        .tabItem { Label("Add", systemImage: "plus.circle.fill") }
                                     
-                    // Add Custom Button tab (placeholder)
-                    NavigationStack {
-                        Text("Custom Button Page")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(Color("TTBackground"))
-                    }
-                    .tabItem {
-                        Label("Add", systemImage: "plus.circle.fill")
-                    }
+                    // Add Custom Button tab 
+                    NavigationStack { AddButtonView() }
+                        .tabItem { Label("Add", systemImage: "plus.circle.fill") }
                                     
                     // Settings tab (placeholder)
-                    NavigationStack {
-                        Text("Settings Page")
+                    NavigationStack { Text("Settings Page")
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(Color("TTBackground"))
-                    }
-                    .tabItem {
-                        Label("Settings", systemImage: "gearshape.fill")
+                            .background(Color("TTBackground")) }
+                        .tabItem { Label("Settings", systemImage: "gearshape.fill")
                     }
                 }
                 .transition(.opacity)

@@ -24,8 +24,8 @@ struct RootView: View {
                         .tabItem { Label("Keyboard", systemImage: "keyboard") }
                                     
                     // Home (categories)
-                    NavigationStack { AddButtonView() }
-                        .tabItem { Label("Add", systemImage: "plus.circle.fill") }
+                    NavigationStack { CategoriesView() }
+                        .tabItem { Label("Home", systemImage: "house.fill") }
                                     
                     // Add Custom Button tab 
                     NavigationStack { AddButtonView() }

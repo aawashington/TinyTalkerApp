@@ -32,11 +32,11 @@ struct RootView: View {
                         .tabItem { Label("Add", systemImage: "plus.circle.fill") }
                                     
                     // Settings tab (placeholder)
-                    NavigationStack { Text("Settings Page")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(Color("TTBackground")) }
-                        .tabItem { Label("Settings", systemImage: "gearshape.fill")
-                    }
+                    //NavigationStack { Text("Settings Page")
+                            //.frame(maxWidth: .infinity, maxHeight: .infinity)
+                            //.background(Color("TTBackground")) }
+                        //.tabItem { Label("Settings", systemImage: "gearshape.fill")
+                    //}
                 }
                 .transition(.opacity)
             }
